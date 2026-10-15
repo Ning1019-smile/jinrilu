@@ -1,0 +1,56 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BD691059084D90A016DF4FFE93A4C2252E83D359116CC7B9E28B02D059568CEBEEB958A67F7959E",
+          "profile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p12",
+          "storePassword": "0000001B1BB78CD096F3C47ED386B2C0667D70FCFC9AC3DC9E0647375801AD2BFA29203582E7D90D51FC14"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "26.0.0",
+        "compatibleSdkVersion": "6.1.1(24)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
