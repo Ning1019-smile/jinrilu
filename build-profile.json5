@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.cer",
-          "keyAlias": "debugKey",
-          "keyPassword": "0000001BE13C361C59D444586CD57F2A7EF58B495E2B510E832C238021AFA707C284D56BA9ABC0FD90BDEF",
-          "profile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p7b",
+          "storeFile": "D:/HarmonyCerts/jinrilu.p12",
+          "storePassword": "0000001D334AF021F300BB474A8B5E451AEB93F023E4A79087B7FE5BBBE247E8F80F98E7BE10A9F8D8F4BF56DF",
+          "keyAlias": "jinrilu",
+          "keyPassword": "0000001DB244C02CE329B6211EA243E4033DBE9BCDA0642CE28C1C2D267941B7A9E82EBD85FE96080872F31054",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p12",
-          "storePassword": "0000001B14C84CD14B54F2010CF0417C81BA3F896615D60D66D5E059D6959E0CB6C74FC637D9544ED0E9EE"
+          "profile": "D:/HarmonyCerts/jinrilu_releaseRelease.p7b",
+          "certpath": "D:/HarmonyCerts/jinrilu_release.cer"
         }
       }
     ],
