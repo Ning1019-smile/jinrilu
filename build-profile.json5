@@ -7,11 +7,11 @@
         "material": {
           "certpath": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.cer",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BD691059084D90A016DF4FFE93A4C2252E83D359116CC7B9E28B02D059568CEBEEB958A67F7959E",
+          "keyPassword": "0000001BE13C361C59D444586CD57F2A7EF58B495E2B510E832C238021AFA707C284D56BA9ABC0FD90BDEF",
           "profile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p12",
-          "storePassword": "0000001B1BB78CD096F3C47ED386B2C0667D70FCFC9AC3DC9E0647375801AD2BFA29203582E7D90D51FC14"
+          "storePassword": "0000001B14C84CD14B54F2010CF0417C81BA3F896615D60D66D5E059D6959E0CB6C74FC637D9544ED0E9EE"
         }
       }
     ],

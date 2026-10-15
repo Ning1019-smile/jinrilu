@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "com.example.demodiary",
-    "vendor": "example",
+    "bundleName": "com.ning1019.jinrilu",
+    "vendor": "ning1019",
     "versionCode": 1000000,
     "versionName": "1.0.0",
     "buildVersion": "1",
