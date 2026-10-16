@@ -110,8 +110,8 @@ export struct CalendarPage {
   // 点击年月：弹出日期选择器，跳到所选日期所在月份
   showDatePicker(): void {
     DatePickerDialog.show({
-      start: new Date(1990, 0, 1),
-      end: new Date(2050, 11, 31),
+      start: new Date(1900, 0, 1),
+      end: new Date(2100, 11, 31),
       selected: new Date(this.year, this.month - 1, 1),
       lunar: false,
       onDateAccept: (value: Date) => {
