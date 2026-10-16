@@ -5,6 +5,19 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
+          "certpath": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B919D2DCCD65E7424896694374E4D356105052BAD91EB141AD097AFD5D5BEF06C00DF25342B81EA",
+          "profile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\Ning\\.ohos\\config\\default_demoDiary_dPLcBwy-vDjLYJPMOQLb0IqRJvj8nDaLt_0CeyeSLvA=.p12",
+          "storePassword": "0000001B6FEA60E7891242AAC161D4A513DCCFB9F179EFA4385861D38E134BCD3EB6527440697A617F49C3"
+        }
+      },
+      {
+        "name": "release",
+        "type": "HarmonyOS",
+        "material": {
           "storeFile": "D:/HarmonyCerts/jinrilu.p12",
           "storePassword": "0000001D32A2FBF934CED8C1AF88002AA0C7D0D0C98BA3C876EAD17A45B8C4CDF9088E8BF718E1F65DBC63BFE7",
           "keyAlias": "jinrilu",
@@ -19,6 +32,19 @@
       {
         "name": "default",
         "signingConfig": "default",
+        "targetSdkVersion": "26.0.0",
+        "compatibleSdkVersion": "6.1.1(24)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      },
+      {
+        "name": "release",
+        "signingConfig": "release",
         "targetSdkVersion": "26.0.0",
         "compatibleSdkVersion": "6.1.1(24)",
         "runtimeOS": "HarmonyOS",
@@ -47,7 +73,8 @@
         {
           "name": "default",
           "applyToProducts": [
-            "default"
+            "default",
+            "release"
           ]
         }
       ]
