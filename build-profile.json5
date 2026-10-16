@@ -6,9 +6,9 @@
         "type": "HarmonyOS",
         "material": {
           "storeFile": "D:/HarmonyCerts/jinrilu.p12",
-          "storePassword": "0000001D334AF021F300BB474A8B5E451AEB93F023E4A79087B7FE5BBBE247E8F80F98E7BE10A9F8D8F4BF56DF",
+          "storePassword": "0000001D32A2FBF934CED8C1AF88002AA0C7D0D0C98BA3C876EAD17A45B8C4CDF9088E8BF718E1F65DBC63BFE7",
           "keyAlias": "jinrilu",
-          "keyPassword": "0000001DB244C02CE329B6211EA243E4033DBE9BCDA0642CE28C1C2D267941B7A9E82EBD85FE96080872F31054",
+          "keyPassword": "0000001D0816A347B5F29738B354EEE048B247FEABEB041E2604D1E5F55C77B3D45367158E4C7E1CF76EC8FE20",
           "signAlg": "SHA256withECDSA",
           "profile": "D:/HarmonyCerts/jinrilu_releaseRelease.p7b",
           "certpath": "D:/HarmonyCerts/jinrilu_release.cer"

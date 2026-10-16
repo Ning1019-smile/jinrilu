@@ -1,6 +1,7 @@
 import { promptAction } from '@kit.ArkUI';
 import { Db } from '../common/Db';
 import { Backup } from '../common/Backup';
+import { PrivacyDialog } from '../common/PrivacyDialog';
 import { Theme, PHRASE_SEP } from '../common/Style';
 
 // 字号档位：0标准 1大 2特大
@@ -13,6 +14,15 @@ export struct SettingsPage {
   @State phrases: Array<string> = [];
   @State newPhrase: string = '';
   @State backupOn: boolean = false;
+  private privacyCtrl: CustomDialogController = new CustomDialogController({
+    builder: PrivacyDialog({
+      agreeText: '我知道了',
+      disagreeText: '',
+      onAgree: () => {}
+    }),
+    autoCancel: true,
+    customStyle: true
+  });
 
   aboutToAppear(): void {
     this.fontChoice = AppStorage.get<number>('fontChoice') ?? 0;
@@ -291,6 +301,33 @@ export struct SettingsPage {
         .borderRadius(12)
         .padding(16)
         .margin({ bottom: 12 })
+        // 隐私政策
+        Column() {
+          Row() {
+            Column() {
+              Text('隐私政策')
+                .fontSize(this.fz(16))
+                .fontWeight(FontWeight.Bold)
+                .fontColor(Theme.text)
+              Text('全文内置在本应用中，无需联网即可查看')
+                .fontSize(this.fz(13))
+                .fontColor(Theme.textMut)
+                .margin({ top: 4 })
+            }
+            .alignItems(HorizontalAlign.Start)
+            .layoutWeight(1)
+            Text('查看 >')
+              .fontSize(this.fz(14))
+              .fontColor(Theme.brandText)
+          }
+          .width('100%')
+        }
+        .width('92%')
+        .backgroundColor(Theme.card)
+        .borderRadius(12)
+        .padding(16)
+        .margin({ bottom: 12 })
+        .onClick(() => this.privacyCtrl.open())
       }
       .width('100%')
     }

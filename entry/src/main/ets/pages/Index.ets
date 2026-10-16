@@ -1,6 +1,8 @@
 import { CalendarPage } from './CalendarPage';
 import { ReviewPage } from './ReviewPage';
 import { SettingsPage } from './SettingsPage';
+import { PrivacyDialog } from '../common/PrivacyDialog';
+import { Db } from '../common/Db';
 import { Theme } from '../common/Style';
 
 // 主页：底部三个入口——日历 / 回顾 / 设置
@@ -11,11 +13,36 @@ struct Index {
   @StorageProp('topAvoidPx') topAvoidPx: number = 0;
   @StorageProp('bottomAvoidPx') bottomAvoidPx: number = 0;
   @State barIndex: number = 0;
+  @State privacyChecked: boolean = false;
   private tabsController: TabsController = new TabsController();
+  // 首次启动隐私政策弹窗（审核要求：首次启动必须明确提示阅读隐私政策）
+  private privacyCtrl: CustomDialogController = new CustomDialogController({
+    builder: PrivacyDialog({
+      onAgree: () => {
+        AppStorage.setOrCreate('privacyAgreed', 1);
+        Db.setSetting('privacyAgreed', '1');
+      }
+    }),
+    autoCancel: false,
+    customStyle: true
+  });
 
   aboutToAppear(): void {
     // 页面重建（如深浅色切换）时回到上次的页签
     this.barIndex = AppStorage.get<number>('lastTab') ?? 0;
+  }
+
+  onPageShow(): void {
+    // 只查一次：未同意过则弹隐私政策
+    if (this.privacyChecked) {
+      return;
+    }
+    this.privacyChecked = true;
+    Db.getSetting('privacyAgreed', '0').then((v: string) => {
+      if (v !== '1') {
+        this.privacyCtrl.open();
+      }
+    });
   }
 
   fz(base: number): number {
